@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global user.name 'Endlesstaco'                             #sets the username
+git config --global user.name 'Endlesstaco'                             # sets the username
 git config --global user.email 'georgiev833@gmail.com'                  # sets the email
 mkdir ~/EndavaHW                                                        # creates EndavaHW dir
 cd ~/EndavaHW                                                           # goes into EndavaHW dir
