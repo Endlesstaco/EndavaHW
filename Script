@@ -16,11 +16,11 @@ git branch -D newone							# Had to fetch a new branch and merge it with master,
 git push -u origin master                                               # Adds the github repository as the origin
 cp  ~/Script .                                                          # the script copies itself into the dir
 git status                                                              # status of the git repository
-git add Script                                                          # adds the script to the git repository
+git add .                                                               # adds the script to the git repository
 git commit -m "Commiting the Script"                                    # commiting the changes
 git push                                                                # Pushing the changes
 echo $(date) >> ~/EndavaHW/date                                         # printing the current date and time and redirecting it into a file
-git add date                                                          	# adds the date and time file into the git repository
+git add .                                                          	# adds the date and time file into the git repository
 git commit -m "Commiting the date file"
 git push
 git branch HopeItWorks                                                  # creating a new branch
