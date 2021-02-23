@@ -1,0 +1,32 @@
+#!/bin/bash
+
+git config --global user.name 'Endlesstaco'                             #sets the username
+git config --global user.email 'georgiev833@gmail.com'                  # sets the email
+mkdir ~/EndavaHW                                                        # creates EndavaHW dir
+cd ~/EndavaHW                                                           # goes into EndavaHW dir
+git init                                                                # Initializing the dir as a repository
+git remote add origin git@github.com:Endlesstaco/EndavaHW.git		# Adds the github repository URL	
+touch README.md															
+git add . 
+git commit -m 'initial commit' 						# Without the readme file and commiting it I was facing an error with the push request												
+git fetch origin master:newone
+git rebase newone
+git push origin HEAD:master
+git branch -D newone							# Had to fetch a new branch and merge it with master, otherwise i was facing an error that the branch is receiving a push from 2 places 
+git push -u origin master                                               # Adds the github repository as the origin
+cp  ~/Script .                                                          # the script copies itself into the dir
+git status                                                              # status of the git repository
+git add .                                                               # adds the script to the git repository
+git commit -m "Commiting the Script"                                    # commiting the changes
+git push                                                                # Pushing the changes
+echo $(date) >> ~/EndavaHW/date                                         # printing the current date and time and redirecting it into a file
+git add .                                                          	# adds the date and time file into the git repository
+git commit -m "Commiting the date file"
+git push
+git branch HopeItWorks                                                  # creating a new branch 
+echo $(date) >> ~/EndavaHW/date                                         # Printing the current date and time and appeding it into the date file
+git diff								# Show how that file is different from what it used to be
+git add .
+git commit -m "Finalizing the chnages"
+git push
+git merge HopeItWorks                                                   # Merging the HopeItWorks branch with the master
